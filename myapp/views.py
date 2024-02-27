@@ -38,7 +38,7 @@ def login_view(request):
     return render(request,'login.html',context={'form':f})
 
 
-login_required(login_url='myapp:login')
+@login_required(login_url='myapp:login')
 def home(request):
       return render(request,'home.html')
 
