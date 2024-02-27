@@ -116,6 +116,39 @@ step 7) check user is valid or notif it is valid the login(request,user)
                 return redirect(reverse('myapp:login'))
 
 
+  Session Management:
+---------------------
+ Client and Server can communicate with some common language which is nothing but 
+HTTP.
+
+ The basic limitation of HTTP is, it is stateless protocol. i.e it is unable to remember 
+client information for future purpose across multiple requests. Every request to the 
+server is treated as new request.
+
+Hence some mechanism must be required at server side to remember client 
+information across multiple requests.This mechanism is nothing but session 
+management mechanism.
+
+
+
+Session Management By using Cookies:
+---------------------------------------
+
+Cookie is a very small amount of information created by Server and maintained by client[Browser].
+
+
+Whenever client sends a request to the server,if server wants to remember client 
+information for the future purpose then server will create cookie object with the required information. 
+
+Server will send that Cookie object to the client as the part of response. 
+
+Client will save that cookie in its local machine and send to the server with every 
+consecutive request. By accessing cookies from the request server can remember client 
+information.
+
+
+
+
 
 
 
